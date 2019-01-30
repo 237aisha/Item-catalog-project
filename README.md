@@ -8,14 +8,15 @@ The Item Catalog project consists of developing an application that provides a l
 In this project i applied what i learned in the resturant project. And i follow the insturation in pdf file.(attached)
 
 Steps for set up:
-    1. Install Vagrant and VirtualBox
-    2. Download a FSND virtual machine: https://github.com/udacity/fullstack-nanodegree-vm
-    3. Launch the Vagrant VM (vagrant up)
-    4. Write your Flask application locally in the vagrant/catalog directory
+```
+    * Install Vagrant and VirtualBox
+    * Download a FSND virtual machine: https://github.com/udacity/fullstack-nanodegree-vm
+    * Launch the Vagrant VM (vagrant up)
+    * Write your Flask application locally in the vagrant/catalog directory
     (which will automatically be synced to /vagrant/catalog within the VM).
-    5. Run your application within the VM (python /vagrant/catalog/application.py)
-    6. Access and test your application by visiting http://localhost:8000 locally
-
+    * Run your application within the VM (python /vagrant/catalog/application.py)
+    * Access and test your application by visiting http://localhost:8000 locally
+```
 
 ### Project Display
 
