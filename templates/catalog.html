@@ -1,0 +1,45 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class = 'flash'>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %} 
+        <ul>
+        {% for message in messages %}
+        <li> <strong> {{ message }} </strong> </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+</div>
+    <div class="col-md-10 padding-none">
+	<div class="col-sm-4 category-list">
+	<h4><b>Categories</b></h4>
+	{% for category in catalog %}
+		<a href = "{{url_for('BrowseCategory', category_name = category.name)}}">
+			<div class="row">
+					<div class="col-md-10 category-list">
+						<h3>{{category.name}}</h3>
+					</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-1"></div>
+				<div class="col-md-1"></div>
+			</div>
+		</a>
+	{% endfor %}
+	</div>
+	 
+	<div class="col-sm-4 category-list">
+         <a href="{{url_for('AddItem')}}">
+		<button class="btn btn-default" id="new-item">Add Item</button>
+            <div class="col-md-10"></div>
+			</a>
+         <h4><b>Latest Items</b></h4>
+         {% for item in items %}
+         <a href = "{{url_for('BrowseCategoryItem', category_name = item.category_name, item_name =item.name)}}">
+            <h3>{{item.name }} ({{item.category_name}})</h3>
+         </a>
+         {% endfor %}
+</div>
+</div>
+{% endblock %}
