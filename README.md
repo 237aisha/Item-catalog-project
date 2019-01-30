@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Item-catalog-project
-=======
 
 # Item-catalog-project
 
@@ -27,4 +24,3 @@ The project will display all CROD functionalities.
 
 
 
->>>>>>> First commit
